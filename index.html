@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FlexTram Flyer Designs</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  body {
+    background: #080808;
+    color: #f5f5f3;
+    font-family: 'Barlow', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 20px;
+  }
+  h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 64px;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+  }
+  p {
+    font-size: 16px;
+    color: #c8cdd4;
+    font-weight: 300;
+    margin-bottom: 48px;
+  }
+  .versions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 900px;
+    width: 100%;
+  }
+  .version-card {
+    border: 1px solid rgba(0,119,255,0.3);
+    background: linear-gradient(135deg, #020d2a, #000510);
+    padding: 40px 32px;
+    text-decoration: none;
+    color: #f5f5f3;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .version-card:hover {
+    border-color: #0077ff;
+    transform: translateY(-4px);
+  }
+  .version-card h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    letter-spacing: 3px;
+    margin: 0 0 8px;
+  }
+  .version-card span {
+    font-size: 14px;
+    color: #00d4ff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+</style>
+</head>
+<body>
+  <h1>FLEXTRAM FLYERS</h1>
+  <p>Select a flyer design to preview</p>
+  <div class="versions">
+    <a href="v1/" class="version-card">
+      <span>Current</span>
+      <h2>VERSION 1</h2>
+    </a>
+  </div>
+</body>
+</html>
