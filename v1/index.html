@@ -466,6 +466,91 @@
     text-transform: uppercase;
     color: rgba(255,255,255,0.25);
   }
+
+  /* ── TABLET (max 768px) ── */
+  @media (max-width: 768px) {
+    body { max-width: 100%; }
+
+    .hero { height: 500px; }
+    .hero-tagline h1 { font-size: 72px; }
+    .hero-tagline .eyebrow { font-size: 12px; }
+    .hero-tagline { bottom: 70px; left: 40px; }
+    .nav-bar { padding: 24px 40px; }
+    .logo-wordmark { font-size: 36px; }
+    .nav-tag { font-size: 11px; }
+
+    .spec-bar {
+      grid-template-columns: 1fr;
+      height: auto;
+      padding: 24px 40px;
+      gap: 16px;
+    }
+    .spec-item {
+      border-right: none;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 12px 0;
+    }
+    .spec-item:last-child { border-bottom: none; }
+
+    .features-section { padding: 56px 40px 0; }
+    .section-title { font-size: 44px; margin-bottom: 32px; }
+    .features-layout {
+      grid-template-columns: 1fr;
+    }
+    .features-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .side-image { height: 300px; }
+    .side-image img { height: 100%; }
+
+    .photo-strip { grid-template-columns: 1fr; }
+    .strip-photo { height: 280px; }
+
+    .cta-section {
+      grid-template-columns: 1fr;
+      padding: 56px 40px;
+      gap: 40px;
+    }
+    .cta-heading { font-size: 72px; }
+    .cinematic-band { height: 280px !important; }
+    .deploy-heading { font-size: 48px !important; }
+    .vehicle-heading { font-size: 32px !important; }
+  }
+
+  /* ── MOBILE (max 480px) ── */
+  @media (max-width: 480px) {
+    .hero { height: 420px; }
+    .hero-tagline h1 { font-size: 52px; }
+    .hero-tagline { bottom: 50px; left: 24px; }
+    .nav-bar { padding: 20px 24px; }
+    .logo-wordmark { font-size: 28px; }
+    .nav-tag { font-size: 10px; letter-spacing: 2px; }
+
+    .spec-bar { padding: 20px 24px; }
+    .spec-value { font-size: 18px; }
+
+    .features-section { padding: 40px 24px 0; }
+    .section-title { font-size: 36px; }
+    .section-label { font-size: 12px; }
+    .features-grid { grid-template-columns: 1fr; }
+    .feature-card { padding: 28px 24px; }
+    .feature-card h3 { font-size: 18px; }
+    .feature-card p { font-size: 15px; }
+    .side-image { height: 240px; }
+
+    .strip-photo { height: 220px; }
+
+    .cta-section { padding: 40px 24px; gap: 32px; }
+    .cta-eyebrow { font-size: 13px; letter-spacing: 3px; }
+    .cta-heading { font-size: 52px; }
+    .cta-badge { padding: 32px 24px; }
+    .badge-headline { font-size: 26px; }
+
+    .footer { padding: 24px 24px; }
+    .cinematic-band { height: 220px !important; }
+    .deploy-heading { font-size: 36px !important; }
+    .vehicle-heading { font-size: 28px !important; }
+  }
 </style>
 </head>
 <body>
@@ -558,7 +643,7 @@
       <div class="strip-caption">Festival &amp; Event Deployment</div>
     </div>
     <div class="strip-photo" style="background:#030303; display:flex; flex-direction:column; justify-content:center; padding: 48px 52px;">
-      <div style="font-family:'Bebas Neue',sans-serif;font-size:40px;letter-spacing:2px;color:var(--white);line-height:1.05;margin-bottom:18px;">WE'RE MORE THAN<br>JUST A VEHICLE</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:40px;letter-spacing:2px;color:var(--white);line-height:1.05;margin-bottom:18px;" class="vehicle-heading">WE'RE MORE THAN<br>JUST A VEHICLE</div>
       <div style="font-family:'Barlow',sans-serif;font-size:17px;font-weight:300;color:var(--silver);opacity:0.8;line-height:1.75;">Our Goal Is To Become The Standard In Event and Venue Last Mile — Ask Us About Our "Last Link" Deployable Mass Transit Systems</div>
     </div>
   </div>
@@ -566,14 +651,14 @@
 
 
 <!-- CINEMATIC BAND -->
-<div style="position:relative;height:380px;overflow:hidden;margin-top:16px;">
+<div class="cinematic-band" style="position:relative;height:380px;overflow:hidden;margin-top:16px;">
   <img src="bonnaroo-fleet.webp" alt="FlexTram fleet lineup"
     style="width:100%;height:100%;object-fit:cover;object-position:center 55%;filter:brightness(0.69) contrast(1.1) saturate(0.75);display:block;">
   <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(0,5,20,0.7) 0%, transparent 50%, rgba(0,5,20,0.4) 100%);"></div>
   <div style="position:absolute;inset:0;background:linear-gradient(to bottom, transparent 50%, rgba(8,8,8,0.85) 100%);"></div>
   <div style="position:absolute;bottom:56px;left:64px;">
     <div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;letter-spacing:5px;text-transform:uppercase;color:var(--accent);margin-bottom:10px;opacity:0.9;">Fleet Scale</div>
-    <div style="font-family:'Bebas Neue',sans-serif;font-size:64px;letter-spacing:2px;line-height:1;color:var(--white);">READY TO DEPLOY<br><span style="color:var(--blue-bright);">AT ANY SCALE.</span></div>
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:64px;letter-spacing:2px;line-height:1;color:var(--white);" class="deploy-heading">READY TO DEPLOY<br><span style="color:var(--blue-bright);">AT ANY SCALE.</span></div>
   </div>
 </div>
 
